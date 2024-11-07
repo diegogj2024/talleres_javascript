@@ -1,3 +1,7 @@
+body{
+  overflow: hidden;
+}
+
 #video {
     position: fixed;
     top: 0;
@@ -45,6 +49,19 @@ input, label {
 #posicion{
     position: relative;left: 70px;
     
+}
+
+.colorletra{
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.tamañodiv{
+  width: 300px;
+  height: 400px;
+  position: relative;left: 400px;
+  bottom: 380px;
 }
 button {
     display: flex;

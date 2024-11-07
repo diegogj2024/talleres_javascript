@@ -8,6 +8,7 @@
     </head>
     <body id="fondo">
         <div id="video"><video id="tamañovideo" src="hu-tao.mp4" autoplay muted loop="infinite"></video></div>
+       
         <div id="padre">
                 <label>nombre</label>
                 <input class="tamañoinput" type="text" required>
@@ -19,9 +20,8 @@
 
                 <label>contraseña</label>
                 <input class="tamañoinput" type="password" required>
-                <p></p>
-                
-<button class="button">
+                <p></p>        
+<button class="button" onclick="mostrar_datos()">
   <div class="bgContainer">
     <span>Enviar</span>
     <span>Enviar</span>
@@ -41,7 +41,11 @@
     </svg>
   </div>
 </button>
-
+ <div class="tamañodiv">
+          <p class="colorletra"></p>
+          <p class="colorletra"></p>
+          <p class="colorletra"></p>
+        </div>
         </div>
         
     </body>
