@@ -1,6 +1,6 @@
 let texto1=" ";
 let texto2=" ";
-let texto0  =" ";
+let texto=" ";
 let elements=" ";
 document.addEventListener("DOMContentLoaded", () => {
     elements = document.querySelectorAll("input");
@@ -48,6 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     function mostrar_datos(){
+        let borde=document.getElementById("tamañodiv")
+        borde.classList.toggle("borde")
+        let imagen=document.getElementById("tamañoimagen")
+        imagen.classList.toggle("foto")
         let parrafos=document.querySelectorAll(".colorletra");
         parrafos[0].textContent=("nombre:"+" "+texto2);
         parrafos[1].textContent=("correo:"+" "+texto);
