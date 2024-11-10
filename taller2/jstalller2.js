@@ -1,51 +1,49 @@
-document.getElementById('add-task-btn').addEventListener('click', addTask);
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('add-task-btn').addEventListener('click', agregarTarea);
 
-function addTask() {
-  const taskInput = document.getElementById('task-input');
-  const taskText = taskInput.value.trim();
+  function agregarTarea() {
+    const tareaInput = document.getElementById('task-input');
+    const textoTarea = tareaInput.value.trim();
 
-  if (taskText === '') {
-    alert('Por favor, ingresa una tarea.');
-    return;
+    if (textoTarea === '') {
+      alert('Por favor, ingresa una tarea.');
+      return;
+    }
+
+    const listaTareas = document.getElementById('task-list');
+    const elementoTarea = document.createElement('li');
+    elementoTarea.className = 'elemento-tarea';
+
+    const contenidoTarea = document.createElement('span');
+    contenidoTarea.textContent = textoTarea;
+
+    const botonesTarea = document.createElement('div');
+    botonesTarea.className = 'botones-tarea';
+
+    const botonCompletar = document.createElement('button');
+    botonCompletar.className = 'boton-completar';
+    botonCompletar.textContent = '✔️';
+    botonCompletar.addEventListener('click', () => marcarComoCompleta(elementoTarea));
+
+    const botonEliminar = document.createElement('button');
+    botonEliminar.className = 'boton-eliminar';
+    botonEliminar.textContent = '🗑️';
+    botonEliminar.addEventListener('click', () => eliminarTarea(elementoTarea));
+
+    botonesTarea.appendChild(botonCompletar);
+    botonesTarea.appendChild(botonEliminar);
+    elementoTarea.appendChild(contenidoTarea);
+    elementoTarea.appendChild(botonesTarea);
+    listaTareas.appendChild(elementoTarea);
+
+    tareaInput.value = '';
   }
 
-  const taskList = document.getElementById('task-list');
-  const taskItem = document.createElement('li');
-  taskItem.className = 'task-item';
+  function marcarComoCompleta(elementoTarea) {
+    elementoTarea.classList.toggle('completada');
+  }
 
-  const taskContent = document.createElement('span');
-  taskContent.textContent = taskText;
-
-  const taskButtons = document.createElement('div');
-  taskButtons.className = 'task-buttons';
-
-  const completeBtn = document.createElement('button');
-  completeBtn.className = 'complete-btn';
-  completeBtn.textContent = '✔️';
-  completeBtn.addEventListener('click', () => toggleComplete(taskItem));
-
-  const deleteBtn = document.createElement('button');
-  deleteBtn.className = 'delete-btn';
-  deleteBtn.textContent = '🗑️';
-  deleteBtn.addEventListener('click', () => deleteTask(taskItem));
-
-
-  taskButtons.appendChild(completeBtn);
-  taskButtons.appendChild(deleteBtn);
-
-
-  taskItem.appendChild(taskContent);
-  taskItem.appendChild(taskButtons);
-
-  taskList.appendChild(taskItem);
-
-  taskInput.value = '';
-}
-
-function toggleComplete(taskItem) {
-  taskItem.classList.toggle('completed');
-}
-
-function deleteTask(taskItem) {
-  taskItem.remove();
-}
+  function eliminarTarea(elementoTarea) {
+    elementoTarea.remove();
+  }
+});
