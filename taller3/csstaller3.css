@@ -4,9 +4,48 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
-  }
+    z-index: -1;
+}
 
-  #tamañovideo{
+#tamañovideo{
     width: 100%;
-  }
+}
+
+.contenedor {
+  width: 500px;
+  padding: 20px;
+  background-color: #ffffff9e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  align-content: center;
+  text-align: center;
+  position: relative;left: 480px;
+  z-index: 1;
+}
+
+
+#acomodar_input{
+  border-radius: 5px;
+  width: 300px;
+}
+
+#boton{
+  background-color: rgb(10, 181, 10);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+#boton:hover{
+  background-color:rgba(10, 181, 10, 0.263);
+}
+
+table,td{
+  border: 2px solid blue;
+}
+
+td:hover{
+  background-color: rgba(10, 201, 10, 0.696);
+}
+#acomodar{
+  position: relative;left: 5px;
+}
