@@ -25,19 +25,19 @@ body {
   width: 100%;
   max-width: 400px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff9e;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   text-align: center;
   z-index: 1;
 }
 
-.entrada-tarea {
+.entradatarea {
   display: flex;
   justify-content: space-between;
 }
 
-#task-input {
+#input {
   width: 75%;
   padding: 10px;
   font-size: 16px;
@@ -45,7 +45,7 @@ body {
   border-radius: 4px;
 }
 
-#add-task-btn {
+#addbtn {
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
@@ -55,17 +55,17 @@ body {
   border-radius: 4px;
 }
 
-#add-task-btn:hover {
+#addbtn:hover {
   background-color: #45a049;
 }
 
-.lista-tareas {
+.listatareas {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
 
-.elemento-tarea {
+.elementotarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,12 +76,12 @@ body {
   margin-bottom: 10px;
 }
 
-.elemento-tarea.completada {
+.completada {
   text-decoration: line-through;
   color: #888;
 }
 
-.botones-tarea button {
+.botonestarea button {
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -89,10 +89,10 @@ body {
   margin-left: 10px;
 }
 
-.boton-completar {
+.botoncompletar {
   color: #4caf50;
 }
 
-.boton-eliminar {
+.botoneliminar {
   color: #e74c3c;
 }

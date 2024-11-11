@@ -1,5 +1,5 @@
-document.getElementById('add-task-btn').addEventListener('click', () => {
-  const tareaInput = document.getElementById('task-input');
+document.getElementById('addbtn').addEventListener('click', () => {
+  const tareaInput = document.getElementById('input');
   const textoTarea = tareaInput.value.trim();
 
   if (textoTarea === '') {
@@ -7,25 +7,25 @@ document.getElementById('add-task-btn').addEventListener('click', () => {
       return;
   }
 
-  const listaTareas = document.getElementById('task-list');
+  const listaTareas = document.getElementById('list');
   const elementoTarea = document.createElement('li');
-  elementoTarea.className = 'elemento-tarea';
+  elementoTarea.className = 'elementotarea';
 
   const contenidoTarea = document.createElement('span');
   contenidoTarea.textContent = textoTarea;
 
   const botonesTarea = document.createElement('div');
-  botonesTarea.className = 'botones-tarea';
+  botonesTarea.className = 'botonestarea';
 
   const botonCompletar = document.createElement('button');
-  botonCompletar.className = 'boton-completar';
+  botonCompletar.className = 'botoncompletar';
   botonCompletar.textContent = '✔️';
   botonCompletar.addEventListener('click', () => {
       elementoTarea.classList.toggle('completada');
   });
 
   const botonEliminar = document.createElement('button');
-  botonEliminar.className = 'boton-eliminar';
+  botonEliminar.className = 'botoneliminar';
   botonEliminar.textContent = '🗑️';
   botonEliminar.addEventListener('click', () => {
       elementoTarea.remove();
