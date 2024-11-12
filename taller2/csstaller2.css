@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#tamañovideo{
+  width: 100%;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff9e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1;
+}
+
+.entradatarea {
+  display: flex;
+  justify-content: space-between;
+}
+
+#input {
+  width: 75%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#addbtn {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+}
+
+#addbtn:hover {
+  background-color: #45a049;
+}
+
+.listatareas {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.elementotarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.completada {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.botonestarea button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.botoncompletar {
+  color: #4caf50;
+}
+
+.botoneliminar {
+  color: #e74c3c;
+}
